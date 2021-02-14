@@ -12,6 +12,9 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    FontPlus: TButton;
+    FontMinus: TButton;
+    FontLabel: TLabel;
     Message: TButton;
     ButtonRed: TButton;
     ButtonYellow: TButton;
@@ -21,9 +24,7 @@ type
     ButtonMinus: TButton;
     ButtonRandomTP: TButton;
     ButtonBlack: TButton;
-    LabelWidth: TLabel;
     MainButton: TButton;
-    Label1: TLabel;
     procedure ButtonRedClick(Sender: TObject);
     procedure ButtonYellowClick(Sender: TObject);
     procedure ButtonGreenClick(Sender: TObject);
@@ -32,6 +33,8 @@ type
     procedure ButtonMinusClick(Sender: TObject);
     procedure ButtonRandomTPClick(Sender: TObject);
     procedure ButtonBlackClick(Sender: TObject);
+    procedure FontMinusClick(Sender: TObject);
+    procedure FontPlusClick(Sender: TObject);
     procedure MainButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MessageClick(Sender: TObject);
@@ -128,11 +131,21 @@ begin
      Form1.Color:= clBlack;
 end;
 
+procedure TForm1.FontMinusClick(Sender: TObject);
+begin
+     FontLabel.Font.Size := FontLabel.Font.Size - 5;
+     FontLabel.Caption := IntToStr(FontLabel.Font.Size);
+end;
+
+procedure TForm1.FontPlusClick(Sender: TObject);
+begin
+     FontLabel.Font.Size := FontLabel.Font.Size + 5;
+     FontLabel.Caption := IntToStr(FontLabel.Font.Size);
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-
      Step := 0;
-     Form1.Label1.Hide();
 end;
 
 procedure TForm1.MessageClick(Sender: TObject);

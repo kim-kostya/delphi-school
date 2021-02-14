@@ -1,116 +1,140 @@
 object Form1: TForm1
-  Left = 657
-  Height = 268
-  Top = 116
-  Width = 479
+  Left = 1391
+  Height = 645
+  Top = 128
+  Width = 838
   Caption = 'Don''t Click The Button'
-  ClientHeight = 268
-  ClientWidth = 479
+  ClientHeight = 645
+  ClientWidth = 838
+  DesignTimePPI = 110
   OnCreate = FormCreate
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.1.0.0'
   object MainButton: TButton
-    Left = 72
-    Height = 25
-    Top = 88
-    Width = 96
+    Left = 82
+    Height = 29
+    Top = 101
+    Width = 110
     Caption = 'Don''t click me'
     OnClick = MainButtonClick
+    ParentFont = False
     TabOrder = 0
   end
-  object Label1: TLabel
-    Left = 11
-    Height = 1
-    Top = 12
-    Width = 1
-    ParentColor = False
-  end
   object ButtonRed: TButton
-    Left = 400
-    Height = 25
+    Left = 752
+    Height = 29
     Top = 0
-    Width = 75
+    Width = 86
     Caption = 'Red'
     OnClick = ButtonRedClick
+    ParentFont = False
     TabOrder = 1
   end
   object ButtonYellow: TButton
-    Left = 400
-    Height = 25
-    Top = 24
-    Width = 75
+    Left = 752
+    Height = 29
+    Top = 32
+    Width = 86
     Caption = 'Yellow'
     OnClick = ButtonYellowClick
+    ParentFont = False
     TabOrder = 2
   end
   object ButtonGreen: TButton
-    Left = 400
-    Height = 25
-    Top = 48
-    Width = 75
+    Left = 752
+    Height = 29
+    Top = 64
+    Width = 86
     Caption = 'Green'
     OnClick = ButtonGreenClick
+    ParentFont = False
     TabOrder = 3
   end
   object ButtonDefault: TButton
-    Left = 400
-    Height = 25
-    Top = 72
-    Width = 75
+    Left = 752
+    Height = 29
+    Top = 96
+    Width = 86
     Caption = 'Default'
     OnClick = ButtonDefaultClick
+    ParentFont = False
     TabOrder = 4
   end
   object ButtonPlus: TButton
-    Left = 184
-    Height = 25
-    Top = 8
-    Width = 75
+    Left = 211
+    Height = 29
+    Top = 9
+    Width = 86
     Caption = '++'
     OnClick = ButtonPlusClick
+    ParentFont = False
     TabOrder = 5
   end
   object ButtonMinus: TButton
-    Left = 256
-    Height = 25
-    Top = 8
-    Width = 75
+    Left = 293
+    Height = 29
+    Top = 9
+    Width = 86
     Caption = '--'
     OnClick = ButtonMinusClick
+    ParentFont = False
     TabOrder = 6
   end
   object ButtonRandomTP: TButton
-    Left = 234
-    Height = 25
-    Top = 167
-    Width = 75
+    Left = 268
+    Height = 29
+    Top = 191
+    Width = 86
     Caption = 'Click Me'
     OnClick = ButtonRandomTPClick
+    ParentFont = False
     TabOrder = 7
   end
   object ButtonBlack: TButton
-    Left = 400
-    Height = 25
-    Top = 96
-    Width = 75
+    Left = 752
+    Height = 29
+    Top = 128
+    Width = 86
     Caption = 'Black'
     OnClick = ButtonBlackClick
+    ParentFont = False
     TabOrder = 8
   end
-  object LabelWidth: TLabel
-    Left = 9
-    Height = 17
-    Top = 223
-    Width = 69
-    Caption = 'LabelWidth'
-    ParentColor = False
-  end
   object Message: TButton
-    Left = 10
-    Height = 25
-    Top = 10
-    Width = 75
+    Left = 11
+    Height = 29
+    Top = 11
+    Width = 86
     Caption = 'Message'
     OnClick = MessageClick
+    ParentFont = False
     TabOrder = 9
+  end
+  object FontLabel: TLabel
+    Left = 482
+    Height = 22
+    Top = 107
+    Width = 18
+    Caption = '10'
+    Font.Height = -15
+    ParentColor = False
+    ParentFont = False
+  end
+  object FontPlus: TButton
+    Left = 568
+    Height = 29
+    Top = 104
+    Width = 86
+    Caption = '++'
+    OnClick = FontPlusClick
+    TabOrder = 10
+  end
+  object FontMinus: TButton
+    Left = 384
+    Height = 29
+    Top = 104
+    Width = 86
+    Caption = '--'
+    OnClick = FontMinusClick
+    TabOrder = 11
   end
 end
