@@ -12,18 +12,20 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    DisableMeButton: TButton;
+    HideMeButton: TButton;
+    ButtonBlack: TButton;
+    ButtonRed: TButton;
     FontPlus: TButton;
     FontMinus: TButton;
     FontLabel: TLabel;
     Message: TButton;
-    ButtonRed: TButton;
     ButtonYellow: TButton;
     ButtonGreen: TButton;
     ButtonDefault: TButton;
     ButtonPlus: TButton;
     ButtonMinus: TButton;
     ButtonRandomTP: TButton;
-    ButtonBlack: TButton;
     MainButton: TButton;
     procedure ButtonRedClick(Sender: TObject);
     procedure ButtonYellowClick(Sender: TObject);
@@ -33,8 +35,10 @@ type
     procedure ButtonMinusClick(Sender: TObject);
     procedure ButtonRandomTPClick(Sender: TObject);
     procedure ButtonBlackClick(Sender: TObject);
+    procedure DisableMeButtonClick(Sender: TObject);
     procedure FontMinusClick(Sender: TObject);
     procedure FontPlusClick(Sender: TObject);
+    procedure HideMeButtonClick(Sender: TObject);
     procedure MainButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MessageClick(Sender: TObject);
@@ -131,6 +135,11 @@ begin
      Form1.Color:= clBlack;
 end;
 
+procedure TForm1.DisableMeButtonClick(Sender: TObject);
+begin
+     DisableMeButton.Enabled := False;
+end;
+
 procedure TForm1.FontMinusClick(Sender: TObject);
 begin
      FontLabel.Font.Size := FontLabel.Font.Size - 5;
@@ -141,6 +150,11 @@ procedure TForm1.FontPlusClick(Sender: TObject);
 begin
      FontLabel.Font.Size := FontLabel.Font.Size + 5;
      FontLabel.Caption := IntToStr(FontLabel.Font.Size);
+end;
+
+procedure TForm1.HideMeButtonClick(Sender: TObject);
+begin
+     HideMeButton.Visible := False;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
